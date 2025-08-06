@@ -1,38 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 200px;
+  background-color: #f5f5f5;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #4a5568;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px 0;
+}
+
+.sidebar-header {
+  padding: 0 20px 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar-nav {
+  list-style: none;
+}
+
+.sidebar-nav li {
+  margin-bottom: 5px;
+}
+
+.sidebar-nav a {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 12px 20px;
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  background-color: #2d3748;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar-nav .icon {
+  margin-right: 10px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header Styles */
+.header {
+  background-color: white;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left h1 {
+  color: #2d3748;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.documentation-link {
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.server-dropdown {
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.user-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #4a5568;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  padding: 30px;
+}
+
+.dashboard-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  background-color: #4a5568;
+  color: white;
+  padding: 10px 15px;
+  margin: -20px -20px 20px -20px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 20px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4a5568;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #718096;
+  font-weight: 600;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.ip-allocation {
+  padding: 20px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+}
+
+.ip-allocation h3 {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* DHCP Servers Table */
+.dhcp-servers-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dhcp-servers-table th {
+  background-color: #f7fafc;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dhcp-servers-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.status-online {
+  background-color: #48bb78;
+}
+
+.status-offline {
+  background-color: #f56565;
+}
+
+/* Leases Section */
+.lease-bar {
+  background-color: #e2e8f0;
+  height: 30px;
+  border-radius: 4px;
+  position: relative;
+  margin: 20px 0;
+}
+
+.lease-fill {
+  background-color: #4299e1;
+  height: 100%;
+  border-radius: 4px;
+  position: relative;
+}
+
+.lease-label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.lease-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #718096;
+  margin-top: 5px;
 }

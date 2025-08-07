@@ -28,7 +28,7 @@ body {
 .sidebar {
   width: 200px;
   height: 100vh;
-  background-color: #4a5568;
+  background-color: #00856a;
   position: fixed;
   left: 0;
   top: 0;
@@ -61,7 +61,7 @@ body {
 
 .sidebar-nav a:hover,
 .sidebar-nav a.active {
-  background-color: #2d3748;
+  background-color: #006b56;
   color: white;
 }
 
@@ -92,14 +92,8 @@ body {
   gap: 20px;
 }
 
-.documentation-link {
-  color: #4299e1;
-  text-decoration: none;
-  font-weight: 500;
-}
-
 .server-dropdown {
-  background-color: #4a5568;
+  background-color: #00856a;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -110,7 +104,7 @@ body {
 .user-icon {
   width: 32px;
   height: 32px;
-  background-color: #4a5568;
+  background-color: #00856a;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -132,7 +126,7 @@ body {
 }
 
 .section-header {
-  background-color: #4a5568;
+  background-color: #00856a;
   color: white;
   padding: 10px 15px;
   margin: -20px -20px 20px -20px;
@@ -221,7 +215,7 @@ body {
 
 /* Leases Section */
 .lease-bar {
-  background-color: #e2e8f0;
+  background-color: #e6f0ff;
   height: 30px;
   border-radius: 4px;
   position: relative;
@@ -229,7 +223,7 @@ body {
 }
 
 .lease-fill {
-  background-color: #4299e1;
+  background-color: #0066ff;
   height: 100%;
   border-radius: 4px;
   position: relative;

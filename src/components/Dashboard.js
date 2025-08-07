@@ -1,4 +1,5 @@
-import React from 'react';
+import IPAllocationChart from './IPAllocationChart';
+import VendorChart from './VendorChart';
 
 const Dashboard = () => {
   return (
@@ -17,21 +18,7 @@ const Dashboard = () => {
           </div>
           <div className="ip-allocation">
             <h3>IP Address Allocation</h3>
-            {/* Placeholder for chart - would need a charting library for actual implementation */}
-            <div style={{
-              height: '120px',
-              background: 'linear-gradient(45deg, #e2e8f0 25%, transparent 25%), linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e2e8f0 75%), linear-gradient(-45deg, transparent 75%, #e2e8f0 75%)',
-              backgroundSize: '20px 20px',
-              backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#718096',
-              fontSize: '14px'
-            }}>
-              Chart Placeholder
-            </div>
+            <IPAllocationChart />
           </div>
         </div>
       </div>
@@ -88,18 +75,7 @@ const Dashboard = () => {
       {/* Vendor Chart Section */}
       <div className="dashboard-section">
         <div className="section-header">VENDOR CHART</div>
-        <div style={{
-          height: '200px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#718096',
-          fontSize: '14px',
-          background: '#f7fafc',
-          borderRadius: '8px'
-        }}>
-          Vendor Chart Placeholder
-        </div>
+        <VendorChart />
       </div>
     </div>
   );

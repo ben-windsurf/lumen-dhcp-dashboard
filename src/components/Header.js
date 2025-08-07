@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaUser } from 'react-icons/fa';
 
 const Header = () => {
@@ -8,7 +7,6 @@ const Header = () => {
         <h1>EXPERT DHCP</h1>
       </div>
       <div className="header-right">
-        <a href="#" className="documentation-link">Documentation</a>
         <select className="server-dropdown">
           <option>172.16.0.86</option>
         </select>
